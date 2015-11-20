@@ -35,6 +35,13 @@ h1 {
   font-size: 40px;
   margin: 40px auto;
 }
+h3 {
+  text-align: center;
+  font-family: 'Oswald-Bold';
+  color: #FFF;
+  font-size: 32px;
+  margin: 40px auto;
+}
 
 .content {
   width: 50%;

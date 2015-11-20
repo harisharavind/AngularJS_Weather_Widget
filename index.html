@@ -7,7 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html>
 <head>
-<title>@Harish AngJS Weather Widget</title>
+<title>Weather Widget by Harish</title>
 <!-- For-Mobile-Apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -79,16 +79,36 @@ function checkTime(i) {
 				weekday[4] = "Thr";
 				weekday[5] = "Fri";
 				weekday[6] = "Sat";
-
-				$scope.oneday = weekday[d.getDay()];
-				$scope.twoday = weekday[d.getDay()+1];
-				$scope.threeday = weekday[d.getDay()+2];
+				
+				alert(d.getDay());
+				
+				var dateInt1, dateInt2, dateInt3;
+				if(d.getDay() == 4){
+					dateInt1=5; 
+					dateInt2=6;
+					dateInt3=0;
+				}
+				if(d.getDay() == 5){
+					dateInt1=6; 
+					dateInt2=0;
+					dateInt3=1;
+				}
+				if(d.getDay() == 6){
+					dateInt1=0; 
+					dateInt2=1;
+					dateInt3=2;
+				}
+				alert(d.getDay());
+				$scope.oneday = weekday[dateInt1];
+				$scope.twoday = weekday[dateInt2];
+				$scope.threeday = weekday[dateInt3];
 				}
 			);
 			});
 </script>
 
-<h1>@Harish AngJS Weather Widget</h1>
+<h1>Weather Widget</h1>
+<h3>-- Created using AngularJS --</h3>
 
 <div class="content">
 
@@ -200,6 +220,7 @@ function checkTime(i) {
 </div>
 
 <div class="footer">
+	<p>Created by Harish Aravind</p>
 	<p>Powered by <a href="http://www.worldweatheronline.com/" title="Free Weather API" target="_blank">World Weather Online</a></p>
 </div>
 </body>
